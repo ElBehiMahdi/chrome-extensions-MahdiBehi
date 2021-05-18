@@ -1,0 +1,16 @@
+{
+  "name": {"message": "REST Client"},
+  "description": {"message": "Constuisez vos requêtes HTTP pour tester directement vos services web."},
+  "request": {"message": "Requête"},
+  "debuglink": {"message": "Lien de débogage"},
+  "url": {"message": "URL:"},
+  "method": {"message": "Méthode:"},
+  "headers": {"message": "En-têtes:"},
+  "data": {"message": "Corps:"},
+  "send": {"message": "Envoyer"},
+  "clear": {"message": "Effacer"},
+  "response": {"message": "Réponse"},
+  "processing": {"message": "En cours"},
+  "status": {"message": "Statut:"},
+  "bad_request": {"message": "Mauvaise requête"}
+}

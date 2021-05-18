@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "youtube-subcount-get",
+  "version": "1",
+  "author": "mahdi behi",
+  "description": "Chris Bell code youtuber counter.",
+
+  "browser_action": {
+    "default_title": "Subscriber count"
+  },
+
+  "chrome_url_overrides": {
+    "newtab": "main.html"
+  },
+
+  "permissions": ["activeTab"]
+}

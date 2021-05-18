@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>REST Client</title>
+    <link rel="stylesheet" type="text/css" href="reset.min.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 class="_msg_">name</h1>
+    </header>
+
+    <section id="request">
+      <fieldset>
+        <legend class="_msg_">request</legend>
+        <p id="purl">
+          <label for="url" class="_msg_">url</label>
+          <input type="text" name="url" id="url" tabindex="1" />
+        </p>
+
+        <p id="methods">
+          <label class="_msg_">method</label>
+          <label class="labelvert" for="get"
+            ><input
+              class="radio"
+              type="radio"
+              checked=""
+              value="get"
+              name="method"
+              id="get"
+              tabindex="2"
+            />
+            GET</label
+          >
+          <label class="labelvert" for="post"
+            ><input
+              class="radio"
+              type="radio"
+              value="post"
+              name="method"
+              id="post"
+              tabindex="2"
+            />
+            POST</label
+          >
+          <label class="labelvert" for="put"
+            ><input
+              class="radio"
+              type="radio"
+              value="put"
+              name="method"
+              id="put"
+              tabindex="2"
+            />
+            PUT</label
+          >
+          <label class="labelvert" for="delete"
+            ><input
+              class="radio"
+              type="radio"
+              value="delete"
+              name="method"
+              id="delete"
+              tabindex="2"
+            />
+            DELETE</label
+          >
+          <label class="labelvert" for="head"
+            ><input
+              class="radio"
+              type="radio"
+              value="head"
+              name="method"
+              id="head"
+              tabindex="2"
+            />
+            HEAD</label
+          >
+          <label class="labelvert" for="options"
+            ><input
+              class="radio"
+              type="radio"
+              value="options"
+              name="method"
+              id="options"
+              tabindex="2"
+            />
+            OPTIONS</label
+          >
+        </p>
+
+        <p id="pheaders">
+          <label for="headers" class="_msg_">headers</label>
+          <textarea
+            name="headers"
+            id="headers"
+            tabindex="3"
+            onkeyup="grow('headers');"
+          ></textarea>
+        </p>
+
+        <p id="data">
+          <label for="postputdata" class="_msg_">data</label>
+          <textarea
+            name="data"
+            id="postputdata"
+            tabindex="4"
+            onkeyup="grow('postputdata');"
+          ></textarea>
+        </p>
+
+        <p>
+          <input
+            class="_msg_val_"
+            type="button"
+            value="send"
+            id="submit"
+            tabindex="5"
+          />
+          <input class="_msg_val_" type="button" value="clear" id="reset" />
+        </p>
+      </fieldset>
+    </section>
+
+    <hr id="sep" />
+    <section id="response">
+      <fieldset>
+        <legend class="_msg_">response</legend>
+        <div id="loader" class="_msg_">processing</div>
+        <div id="responsePrint">
+          <p id="pstatus">
+            <label class="_msg_">status</label>
+            <span id="responseStatus">&nbsp;</span>
+          </p>
+
+          <p id="respHeaders">
+            <label for="responseHeaders" class="_msg_">headers</label>
+            <textarea
+              name="responseHeaders"
+              id="responseHeaders"
+              tabindex="6"
+              onkeyup="grow('responseHeaders');"
+            ></textarea>
+          </p>
+
+          <p id="debugLinks" style="display: none;">
+            <label for="debugLink" class="_msg_">debuglink</label>
+            <a href="" id="debugLink"></a>
+          </p>
+
+          <div id="respData">
+            <label for="responseData" class="_msg_">data</label>
+            <div name="responseData" id="responseData" contenteditable="true">
+              <pre><code name="codeData" id="codeData" class="chili-lang-html">&nbsp;</code></pre>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </section>
+  </body>
+  <script text="text/javascript">
+    $(":input:first").focus();
+  </script>
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"
+  ></script>
+  <script type="text/javascript" src="jquery.min.js"></script>
+  <script type="text/javascript" src="jquery.chili.min.js"></script>
+  <script type="text/javascript" src="jquery.chili.recipes.js"></script>
+  <script type="text/javascript" src="requester.js"></script>
+</html>
